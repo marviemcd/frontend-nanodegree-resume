@@ -13,7 +13,7 @@ var bio = {
     },
     "welcomeMessage": "Welcome to my resume!",
     "skills": skills,
-    "bioPic": "images/DSC_0186 cartoon.jpg"
+    "bioPic": "DSC_0186 cartoon.jpg"
 };
 bio.display = function() {
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
@@ -184,12 +184,12 @@ var projects = {
         "title": "Front-End Development Project 0",
         "dates": "January 2016",
         "description": "HTML, CSS",
-        "images": ["images/FE Project 0.png"]
+        "images": ["FE Project 0.png"]
     }, {
         "title": "Front-End Development Project 1",
         "dates": "February 2016",
         "description": "GITHub, Bootstrap",
-        "images": ["images/FE Project 1.png", "http://placekitten.com/350/150"]
+        "images": ["FE Project 1.png", "http://placekitten.com/350/150"]
     }],
     display: function() {
         $("#projects").append(HTMLprojectStart);
