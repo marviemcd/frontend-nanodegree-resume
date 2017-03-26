@@ -13,7 +13,7 @@ var bio = {
     },
     "welcomeMessage": "Welcome to my resume!",
     "skills": skills,
-    "bioPic": "DSC_0186 cartoon.jpg"
+    "biopic": "DSC_0186 cartoon.jpg"
 };
 bio.display = function() {
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
@@ -30,9 +30,9 @@ bio.display = function() {
     $("#topContacts").append(formattedGithub);
     $("#topContacts").append(formattedLocation);
 
-    var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+    var formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic);
     var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-    $("#header").append(formattedBioPic);
+    $("#header").append(formattedBiopic);
     $("#header").append(formattedWelcomeMsg);
 
     $("#header").append(HTMLskillsStart);
@@ -45,7 +45,7 @@ bio.display = function() {
     $("#footerContacts").append(formattedEmail);
     $("#footerContacts").append(formattedGithub);
     $("#footerContacts").append(formattedLocation);
-}
+};
 // display bio object
 bio.display();
 
@@ -101,7 +101,7 @@ education.display = function() {
         $(".education-entry:last").append(formattedLocation);
         $(".education-entry:last").append(formattedMajor);
 
-    })
+    });
 
     $(".education-entry:last").append(HTMLonlineClasses);
 
@@ -114,8 +114,8 @@ education.display = function() {
         $(".education-entry:last").append(formattedSchool);
         $(".education-entry:last").append(formattedDates);
         $(".education-entry:last").append(formattedURL);
-    })
-}
+    });
+};
 //display education
 education.display();
 
@@ -158,7 +158,7 @@ var work = {
         }
     ],
     display: function() {
-       work.jobs.forEach(function(index) {
+        work.jobs.forEach(function(index) {
             $("#workExperience").append(HTMLworkStart);
 
             var formattedEmployer = HTMLworkEmployer.replace("%data%", index.employer);
@@ -171,7 +171,7 @@ var work = {
             $(".work-entry:last").append(formattedDates);
             $(".work-entry:last").append(formattedLocation);
             $(".work-entry:last").append(formattedDescription);
-        })
+        });
     }
 };
 // display work
@@ -180,7 +180,7 @@ work.display();
 
 // set up projects object with display  function
 var projects = {
-    "Online": [{
+    "projects": [{
         "title": "Front-End Development Project 0",
         "dates": "January 2016",
         "description": "HTML, CSS",
@@ -193,15 +193,15 @@ var projects = {
     }],
     display: function() {
         $("#projects").append(HTMLprojectStart);
-        projects.Online.forEach(function(index) {
+        projects.projects.forEach(function(index) {
             $(".project-entry:last").append(HTMLprojectTitle.replace("%data%", index.title));
             $(".project-entry:last").append(HTMLprojectDates.replace("%data%", index.dates));
             $(".project-entry:last").append(HTMLprojectDescription.replace("%data%", index.description));
 
             index.images.forEach(function(index2) {
                 $(".project-entry:last").append(HTMLprojectImage.replace("%data%", index2));
-            })
-        })
+            });
+        });
     }
 };
 // display projects

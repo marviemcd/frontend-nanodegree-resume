@@ -91,7 +91,8 @@ p {
 }
 
 a {
-    color: #04A2C9;  /*50D0FA;*/
+    color: #04A2C9;
+  /*50D0FA;*/
     text-decoration: none;
     margin-top: 10px;
     display: block;
