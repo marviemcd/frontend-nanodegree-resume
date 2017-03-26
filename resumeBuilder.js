@@ -1,6 +1,3 @@
-// this array is used in bio object
-var skills = ["Programming", "Quality Assurance", "Documentation", "Debugging", "Database", "HTML/CSS", "JavaScript"];
-
 // setup bio object with display function
 var bio = {
     "name": "M McDevitt",
@@ -12,7 +9,7 @@ var bio = {
         "location": "Collegeville, PA"
     },
     "welcomeMessage": "Welcome to my resume!",
-    "skills": skills,
+    "skills": ["Programming", "Quality Assurance", "Documentation", "Debugging", "Database", "HTML/CSS", "JavaScript"],
     "biopic": "DSC_0186 cartoon.jpg"
 };
 bio.display = function() {
